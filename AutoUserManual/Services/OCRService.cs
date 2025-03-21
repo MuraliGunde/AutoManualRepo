@@ -70,7 +70,7 @@ namespace UserManualNew.Services
                     {
                         using (var result = engine.Process(img))
                         {
-                            return result.GetText().Trim(); // Trim whitespace
+                            return result.GetText().Trim();   // Trim whitespace
                         }
                     }
                 }

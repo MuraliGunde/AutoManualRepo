@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pd5tcArGga0=",
+  "dgSpecHash": "j14crS18SGA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\AutoUserManual\\AutoUserManual\\AutoUserManual.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\AutoUserManual\\AutoUserManual\\AutoUserManual.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\itextsharp.lgplv2.core\\3.7.1\\itextsharp.lgplv2.core.3.7.1.nupkg.sha512",
