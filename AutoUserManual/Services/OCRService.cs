@@ -61,26 +61,18 @@ namespace UserManualNew.Services
 
         public string ExtractTextFromImage(string filePath)
         {
-            var tessDataPath = @"C:\Program Files\Tesseract-OCR\tessdata"; // Path to tessdata folder
-            try
+            // Path to tessdata folder inside the project
+            var tessDataPath = Path.Combine(AppContext.BaseDirectory, "tessdata");
+
+            using (var engine = new TesseractEngine(tessDataPath, "eng", EngineMode.Default))
             {
-                using (var engine = new TesseractEngine(tessDataPath, "eng", EngineMode.Default))
+                using (var img = Pix.LoadFromFile(filePath))
                 {
-                    using (var img = Pix.LoadFromFile(filePath))
-                    {
-                        using (var result = engine.Process(img))
-                        {
-                            return result.GetText().Trim();   // Trim whitespace
-                        }
-                    }
+                    var result = engine.Process(img);
+                    return result.GetText();
                 }
             }
-            catch (Exception ex)
-            {
-                return $"Error during OCR: {ex.Message}";
-            }
         }
-
     }
 }   
 
